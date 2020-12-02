@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rso-image-upload-services" />
+        <module name="image-catalog-lib" />
+        <module name="rso-image-upload-models" />
+        <module name="rso-image-upload-api" />
+        <module name="image-catalog-api" />
+        <module name="image-catalog-services" />
+        <module name="rso-image-upload-lib" />
+        <module name="image-catalog-models" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="image-catalog" target="14" />
+      <module name="image-catalog-api" target="14" />
+      <module name="image-catalog-lib" target="14" />
+      <module name="image-catalog-models" target="14" />
+      <module name="image-catalog-services" target="14" />
+      <module name="rso-image-upload" target="14" />
+      <module name="rso-image-upload-api" target="14" />
+      <module name="rso-image-upload-lib" target="14" />
+      <module name="rso-image-upload-models" target="14" />
+      <module name="rso-image-upload-services" target="14" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

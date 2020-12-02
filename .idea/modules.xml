@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/image-catalog.iml" filepath="$PROJECT_DIR$/image-catalog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/image-catalog-api.iml" filepath="$PROJECT_DIR$/api/image-catalog-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/image-catalog-lib.iml" filepath="$PROJECT_DIR$/lib/image-catalog-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/models/image-catalog-models.iml" filepath="$PROJECT_DIR$/models/image-catalog-models.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/image-catalog-services.iml" filepath="$PROJECT_DIR$/services/image-catalog-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rso-image-upload.iml" filepath="$PROJECT_DIR$/rso-image-upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/rso-image-upload-api.iml" filepath="$PROJECT_DIR$/api/rso-image-upload-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/rso-image-upload-lib.iml" filepath="$PROJECT_DIR$/lib/rso-image-upload-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/models/rso-image-upload-models.iml" filepath="$PROJECT_DIR$/models/rso-image-upload-models.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services/rso-image-upload-services.iml" filepath="$PROJECT_DIR$/services/rso-image-upload-services.iml" />
+    </modules>
+  </component>
+</project>
