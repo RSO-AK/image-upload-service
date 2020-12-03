@@ -13,7 +13,7 @@ spec:
         app: rso-image-upload
     spec:
       containers:
-        - image: armkom/rso-image-upload-api:1.0.0-SNAPSHOT-5.1
+        - image: armkom/rso-image-upload-api:1.0.0-SNAPSHOT-6.1
           name: rso-image-upload
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL

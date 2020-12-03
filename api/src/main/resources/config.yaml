@@ -9,9 +9,9 @@ kumuluzee:
       port: 8080
   datasources:
     - jndi-name: jdbc/ImageMetadataDS
-      connection-url: jdbc:postgresql://kandula.db.elephantsql.com:5432/ibqchmnt
-      username: ibqchmnt
-      password: kYJtKCDAdndLv2IoDd5hhwjwe_wFftrE
+      connection-url: jdbc:postgresql://ec2-54-247-107-109.eu-west-1.compute.amazonaws.com:5432/dfibhkev60bqq9
+      username: qoexemnhfefspy
+      password: d56898d67f2ce6aef9b3b0715e99c1c0e7ebe12c5528fd03b13e6303fedd8de9
       max-pool-size: 20
   cors-filter:
     servlet:

@@ -1,1 +1,1 @@
-INSERT INTO image_metadata (title, description, width, height, created, uri) VALUES ('Our fist image', 'This is the first image that we created for the RSO course.', 1280, 1325, TIMESTAMP '2006-01-01 15:36:38', 'https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/tess_first_light-tb.jpg');
+INSERT INTO image_metadata (title, description, width, height, created, uri) VALUES ('First', 'Initial image.', 80, 55, TIMESTAMP '2020-11-11 15:36:38', 'https://rso-komicarmin.s3.eu-west-2.amazonaws.com/image5955527410183920973.png');
