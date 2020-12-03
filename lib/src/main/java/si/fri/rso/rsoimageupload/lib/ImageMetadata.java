@@ -1,8 +1,6 @@
 package si.fri.rso.rsoimageupload.lib;
 
-import java.io.*;
 import java.time.Instant;
-import java.util.Base64;
 
 public class ImageMetadata {
 
