@@ -29,7 +29,7 @@ public class DemoResource {
         info.setOpis_projekta("Projekt je headless CMS preko katerega definiramo podatkovne modele oz. entitete in oblekte za le te. Vsebine lahko dodajamo in do njih dostopamo preko API-ja ali UI.");
         info.setMikrostoritve(asList("http://52.151.205.45:8080/v1/images"));
         info.setGithub(asList("https://github.com/RSO-AK/image-upload-service"));
-        info.setTravis(asList("https://travis-ci.org/github/RSO-AK/image-upload-service"));
+        info.setTravis(asList("https://travis-ci.com/github/RSO-AK/image-upload-service"));
         info.setDockerhub(asList("https://hub.docker.com/r/armkom/rso-image-upload-api"));
 
         return Response.status(Response.Status.OK).entity(info).build();
