@@ -1,5 +1,5 @@
 kumuluzee:
-  name: image-catalog-service
+  name: rso-image-upload-service
   env:
     name: dev
   version: 1.0.0
@@ -9,9 +9,9 @@ kumuluzee:
       port: 8080
   datasources:
     - jndi-name: jdbc/ImageMetadataDS
-      connection-url: jdbc:postgresql://localhost:5432/image-metadata
-      username: postgres
-      password: admin
+      connection-url: jdbc:postgresql://kandula.db.elephantsql.com:5432/ibqchmnt
+      username: ibqchmnt
+      password: kYJtKCDAdndLv2IoDd5hhwjwe_wFftrE
       max-pool-size: 20
   cors-filter:
     servlet:
@@ -19,3 +19,7 @@ kumuluzee:
       allow-origin: "*"
 rest-properties:
   maintenance-mode: false
+app-properties:
+  awss3:
+    access-key: "AKIAI4W3EB6D5443Q3JA"
+    secret-key: "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"

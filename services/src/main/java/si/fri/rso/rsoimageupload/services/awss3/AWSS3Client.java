@@ -9,17 +9,22 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import si.fri.rso.rsoimageupload.config.AppProperties;
 
+import javax.inject.Inject;
 import java.io.File;
 
 public class AWSS3Client {
+    @Inject
+    private AppProperties appProperties;
+
     AmazonS3 s3client;
     String bucketName = "rso-komicarmin";
 
     public AWSS3Client() {
         AWSCredentials credentials = new BasicAWSCredentials(
-                "AKIAI4W3EB6D5443Q3JA",
-                "8hQE7AsThOgD2KXwICIzCMOUpvCuI/UXzlhU1MrB"
+                appProperties.getAWSS3AccessKey(),
+                appProperties.getAWSS3SecretKey()
         );
 
         s3client = AmazonS3ClientBuilder
