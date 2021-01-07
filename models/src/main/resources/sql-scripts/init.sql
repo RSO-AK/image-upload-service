@@ -1,1 +1,0 @@
-INSERT INTO image_metadata (title, description, width, height, created, uri) VALUES ('First', 'Initial image.', 80, 55, TIMESTAMP '2020-11-11 15:36:38', 'https://rso-komicarmin.s3.eu-west-2.amazonaws.com/image5955527410183920973.png');
