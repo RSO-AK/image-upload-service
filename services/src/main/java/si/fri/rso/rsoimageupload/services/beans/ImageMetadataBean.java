@@ -2,6 +2,8 @@ package si.fri.rso.rsoimageupload.services.beans;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
+import org.eclipse.microprofile.metrics.annotation.Counted;
+import org.eclipse.microprofile.metrics.annotation.Timed;
 import si.fri.rso.rsoimageupload.lib.ImageMetadata;
 import si.fri.rso.rsoimageupload.models.converters.ImageMetadataConverter;
 import si.fri.rso.rsoimageupload.models.entities.ImageMetadataEntity;
@@ -25,6 +27,8 @@ public class ImageMetadataBean {
     @Inject
     private EntityManager em;
 
+    @Timed(name = "getImageMetadata_time")
+    @Counted(name = "getImageMetadata_count")
     public List<ImageMetadata> getImageMetadata() {
 
         TypedQuery<ImageMetadataEntity> query = em.createNamedQuery(
@@ -36,6 +40,8 @@ public class ImageMetadataBean {
 
     }
 
+    @Timed(name = "getImageMetadataFilter_time")
+    @Counted(name = "getImageMetadataFilter_count")
     public List<ImageMetadata> getImageMetadataFilter(UriInfo uriInfo) {
 
         QueryParameters queryParameters = QueryParameters.query(uriInfo.getRequestUri().getQuery()).defaultOffset(0)
@@ -45,6 +51,8 @@ public class ImageMetadataBean {
                        .map(ImageMetadataConverter::toDto).collect(Collectors.toList());
     }
 
+    @Timed(name = "getImageMetadataId_time")
+    @Counted(name = "getImageMetadataId_count")
     public ImageMetadata getImageMetadata(Integer id) {
 
         ImageMetadataEntity imageMetadataEntity = em.find(ImageMetadataEntity.class, id);
@@ -58,6 +66,8 @@ public class ImageMetadataBean {
         return imageMetadata;
     }
 
+    @Timed(name = "createImageMetadata_time")
+    @Counted(name = "createImageMetadata_count")
     public ImageMetadata createImageMetadata(ImageMetadata imageMetadata) {
 
         ImageMetadataEntity imageMetadataEntity = ImageMetadataConverter.toEntity(imageMetadata);
@@ -78,6 +88,8 @@ public class ImageMetadataBean {
         return ImageMetadataConverter.toDto(imageMetadataEntity);
     }
 
+    @Timed(name = "putImageMetadata_time")
+    @Counted(name = "putImageMetadata_count")
     public ImageMetadata putImageMetadata(Integer id, ImageMetadata imageMetadata) {
 
         ImageMetadataEntity c = em.find(ImageMetadataEntity.class, id);
@@ -101,6 +113,8 @@ public class ImageMetadataBean {
         return ImageMetadataConverter.toDto(updatedImageMetadataEntity);
     }
 
+    @Timed(name = "deleteImageMetadata_time")
+    @Counted(name = "deleteImageMetadata_time_count")
     public boolean deleteImageMetadata(Integer id) {
 
         ImageMetadataEntity imageMetadata = em.find(ImageMetadataEntity.class, id);

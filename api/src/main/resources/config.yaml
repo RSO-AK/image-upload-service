@@ -13,12 +13,25 @@ kumuluzee:
       username: qoexemnhfefspy
       password: d56898d67f2ce6aef9b3b0715e99c1c0e7ebe12c5528fd03b13e6303fedd8de9
       max-pool-size: 20
+  health:
+    checks:
+      data-source-health-check:
+        type: liveness
+        jndi-name: jdbc/ImageMetadataDS
+  metrics:
+    web-instrumentation:
+      - name: images-endpoint
+        url-pattern: /v1/images/*
+    servlet:
+      enabled: true
+      mapping: /my-metrics-servlet
   cors-filter:
     servlet:
       allow-generic-http-requests: false
       allow-origin: "*"
 rest-properties:
   maintenance-mode: false
+  broken: false
 app-properties:
   awss3:
     access-key: "AKIAI4W3EB6D5443Q3JA"

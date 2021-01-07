@@ -25,8 +25,12 @@
             <artifactId>kumuluzee-cors</artifactId>
         </dependency>
         <dependency>
-            <artifactId>kumuluzee-config-consul</artifactId>
             <groupId>com.kumuluz.ee.config</groupId>
+            <artifactId>kumuluzee-config-mp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.health</groupId>
+            <artifactId>kumuluzee-health</artifactId>
         </dependency>
 
         <dependency>

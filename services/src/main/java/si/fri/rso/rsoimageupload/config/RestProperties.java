@@ -12,6 +12,9 @@ public class RestProperties {
     @ConfigValue(watch = true)
     private Boolean maintenanceMode;
 
+    @ConfigValue(watch = true)
+    private Boolean broken;
+
     public Boolean getMaintenanceMode() {
         return this.maintenanceMode;
     }
@@ -20,4 +23,11 @@ public class RestProperties {
         this.maintenanceMode = maintenanceMode;
     }
 
+    public Boolean getBroken() {
+        return broken;
+    }
+
+    public void setBroken(final Boolean broken) {
+        this.broken = broken;
+    }
 }
