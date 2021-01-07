@@ -10,24 +10,24 @@ import javax.enterprise.context.ApplicationScoped;
 public class AppProperties {
 
     @ConfigValue(value = "awss3.access-key", watch = true)
-    private String AWSS3AccessKey;
+    private String aWSS3AccessKey;
 
     @ConfigValue(value = "awss3.secret-key", watch = true)
-    private String AWSS3SecretKey;
+    private String aWSS3SecretKey;
 
     public String getAWSS3SecretKey() {
-        return AWSS3SecretKey;
+        return aWSS3SecretKey;
     }
 
     public void setAWSS3SecretKey(String amazonRekognitionSecretKey) {
-        this.AWSS3SecretKey = amazonRekognitionSecretKey;
+        this.aWSS3SecretKey = amazonRekognitionSecretKey;
     }
 
     public String getAWSS3AccessKey() {
-        return AWSS3AccessKey;
+        return aWSS3AccessKey;
     }
 
     public void setAWSS3AccessKey(String amazonRekognitionAccessKey) {
-        this.AWSS3AccessKey = amazonRekognitionAccessKey;
+        this.aWSS3AccessKey = amazonRekognitionAccessKey;
     }
 }

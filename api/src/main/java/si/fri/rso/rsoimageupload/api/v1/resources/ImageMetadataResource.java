@@ -1,5 +1,6 @@
 package si.fri.rso.rsoimageupload.api.v1.resources;
 
+import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -34,6 +35,9 @@ public class ImageMetadataResource {
     @Context
     protected UriInfo uriInfo;
 
+    @Inject
+    private AWSS3Client AWSS3Client;
+
     @GET
     public Response getImageMetadata() {
 
@@ -59,10 +63,8 @@ public class ImageMetadataResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createImageMetadata(ImageMetadata imageMetadata) throws IOException {
-        AWSS3Client client = new AWSS3Client();
-
         File imageFile = Base64FileConverter.base64ToFile(imageMetadata.getImage());
-        String uri = client.uploadObject(imageFile);
+        String uri = AWSS3Client.uploadObject(imageFile);
 
         imageMetadata.setUri(uri);
 
