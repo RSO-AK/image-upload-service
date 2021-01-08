@@ -26,6 +26,9 @@ kumuluzee:
     servlet:
       allow-generic-http-requests: false
       allow-origin: "*"
+  config:
+    consul:
+      agent: http://35.194.17.139
 rest-properties:
   maintenance-mode: false
   broken: false
