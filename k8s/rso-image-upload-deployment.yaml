@@ -13,7 +13,7 @@ spec:
         app: rso-image-upload
     spec:
       containers:
-        - image: armkom/rso-image-upload-api:1.0.0-SNAPSHOT-10.1
+        - image: armkom/rso-image-upload-api:1.0.0-SNAPSHOT-11.1
           name: rso-image-upload
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
@@ -33,14 +33,15 @@ spec:
             httpGet:
               path: /health/live
               port: server
-            initialDelaySeconds: 20
+            initialDelaySeconds: 120
             periodSeconds: 3
           readinessProbe:
             httpGet:
               path: /health/ready
               port: server
-            initialDelaySeconds: 20
+            initialDelaySeconds: 120
             periodSeconds: 3
+      restartPolicy: Always
 
 ---
 
@@ -49,7 +50,7 @@ kind: Service
 metadata:
   name: rso-image-upload
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 8080
       protocol: TCP
