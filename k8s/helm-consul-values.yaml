@@ -1,0 +1,9 @@
+global:
+  datacenter: hashidc1
+
+ui:
+  service:
+    type: 'LoadBalancer'
+
+syncCatalog:
+  enabled: true
